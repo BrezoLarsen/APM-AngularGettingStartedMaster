@@ -36,7 +36,10 @@
                         [title]='product.productName'
                         [style.width.px]='imageWidth'
                         [style.margin.px]='imageMargin'></td>
-                    <td>{{product.productName}}</td>
+                    <td>
+                        <a [routerLink]="['/products', product.productId]">
+                            {{product.productName}}</a>
+                    </td>
                     <td>{{product.productCode | lowercase | convertToSpaces: '-'}}</td>
                     <td>{{product.releaseDate}}</td>
                     <!-- '1.2-2' al menos un número a la izq, y mínimo 2 decimales, máximo 2 decimales -->
